@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SchoolWebApp</title>
+</head>
+<body>
+
+    <h1>Courses</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Course Number</th>
+                <th>Name</th>
+                <th>Term</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="course : ${courses}">
+                <td th:text="${course.number}">Course Number</td>
+                <td th:text="${course.name}">Course Name</td>
+                <td th:text="${course.term}">Course Term</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a th:href="@{/add}">Add a Course</a>
+</body>
+</html>
